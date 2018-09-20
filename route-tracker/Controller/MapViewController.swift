@@ -40,21 +40,48 @@ class MapViewController: UIViewController {
     locationManager?.requestAlwaysAuthorization()
     locationManager?.delegate = self
   }
+  
+  private func startTracking() {
+    switchTrackingButton.setTitle("Stop Tracking", for: .normal)
+    route?.map = nil
+    route = GMSPolyline()
+    configureRouteStyle()
+    routePath = GMSMutablePath()
+    route?.map = mapView
+    locationManager?.startUpdatingLocation()
+  }
+  
+  private func stopTracking() {
+    switchTrackingButton.setTitle("Start Tracking", for: .normal)
+    locationManager?.stopUpdatingLocation()
+    guard let routePath = routePath else { return }
+    DataService.instance.saveRoute(routePath)
+  }
 
   @IBAction func switchTrackingModeButtonWasPressed(_ sender: Any) {
     if switchTrackingButton.title(for: .normal) == "Start Tracking" {
-      switchTrackingButton.setTitle("Stop Tracking", for: .normal)
-      route?.map = nil
-      route = GMSPolyline()
-      configureRouteStyle()
-      routePath = GMSMutablePath()
-      route?.map = mapView
-      locationManager?.startUpdatingLocation()
+      startTracking()
     } else {
-      switchTrackingButton.setTitle("Start Tracking", for: .normal)
-      locationManager?.stopUpdatingLocation()
-      guard let routePath = routePath else { return }
-      DataService.instance.saveRoute(routePath)
+      stopTracking()
+    }
+  }
+  
+  private func showStopTrackingAlert() {
+    let alertController = UIAlertController(title: "Tracking is active!", message: "You need to stop tracking first", preferredStyle: .alert)
+    let confirmAction = UIAlertAction(title: "Stop", style: .destructive) { [weak self] action in
+      self?.stopTracking()
+    }
+    alertController.addAction(confirmAction)
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+    alertController.addAction(cancelAction)
+    present(alertController, animated: true, completion: nil)
+  }
+  
+  @IBAction func showPreviousRouteButtonWasPressed(_ sender: Any) {
+    if switchTrackingButton.title(for: .normal) == "Stop Tracking" {
+      showStopTrackingAlert()
+    } else {
+      // Show Route
     }
   }
 }

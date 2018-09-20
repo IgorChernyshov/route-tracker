@@ -36,6 +36,9 @@
                                         <rect key="frame" x="15" y="10" width="117" height="30"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <state key="normal" title="Previous Route"/>
+                                        <connections>
+                                            <action selector="showPreviousRouteButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZJN-sS-enM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
