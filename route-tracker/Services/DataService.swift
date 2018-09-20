@@ -30,8 +30,24 @@ class DataService {
         realm.add(coordinates)
       }
     } catch {
-      print(error.localizedDescription)
+      debugPrint(error.localizedDescription)
     }
   }
   
+  func loadRoute() -> GMSMutablePath {
+    let routePath = GMSMutablePath()
+    do {
+      let realm = try Realm()
+      let savedRoute = realm.objects(Coordinate.self)
+      for coordinate in savedRoute {
+        var clCoordinate = CLLocationCoordinate2D()
+        clCoordinate.latitude = coordinate.latitude
+        clCoordinate.longitude = coordinate.longitude
+        routePath.add(clCoordinate)
+      }
+    } catch {
+      debugPrint(error.localizedDescription)
+    }
+    return routePath
+  }
 }

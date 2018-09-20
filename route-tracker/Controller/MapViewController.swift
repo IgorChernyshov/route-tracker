@@ -70,6 +70,7 @@ class MapViewController: UIViewController {
     let alertController = UIAlertController(title: "Tracking is active!", message: "You need to stop tracking first", preferredStyle: .alert)
     let confirmAction = UIAlertAction(title: "Stop", style: .destructive) { [weak self] action in
       self?.stopTracking()
+      self?.loadPreviousRoute()
     }
     alertController.addAction(confirmAction)
     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -77,11 +78,23 @@ class MapViewController: UIViewController {
     present(alertController, animated: true, completion: nil)
   }
   
+  private func loadPreviousRoute() {
+    route?.map = nil
+    route = GMSPolyline()
+    configureRouteStyle()
+    routePath = DataService.instance.loadRoute()
+    route?.path = routePath
+    route?.map = mapView    
+    guard let coordinate = routePath?.coordinate(at: 0) else { return }
+    let position = GMSCameraPosition.camera(withTarget: coordinate, zoom: 17)
+    mapView.animate(to: position)
+  }
+  
   @IBAction func showPreviousRouteButtonWasPressed(_ sender: Any) {
     if switchTrackingButton.title(for: .normal) == "Stop Tracking" {
       showStopTrackingAlert()
     } else {
-      // Show Route
+      loadPreviousRoute()
     }
   }
 }
@@ -98,5 +111,6 @@ extension MapViewController: CLLocationManagerDelegate {
   
   func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
     debugPrint(error.localizedDescription)
+    stopTracking()
   }
 }
