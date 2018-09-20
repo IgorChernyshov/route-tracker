@@ -53,6 +53,8 @@ class MapViewController: UIViewController {
     } else {
       switchTrackingButton.setTitle("Start Tracking", for: .normal)
       locationManager?.stopUpdatingLocation()
+      guard let routePath = routePath else { return }
+      DataService.instance.saveRoute(routePath)
     }
   }
 }

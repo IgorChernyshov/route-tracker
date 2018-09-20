@@ -32,10 +32,18 @@
                                             <action selector="switchTrackingModeButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7vP-2x-hE8"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s30-Dh-Z4Y">
+                                        <rect key="frame" x="15" y="10" width="117" height="30"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <state key="normal" title="Previous Route"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="TbS-Sg-4hg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mLb-LY-ZVf" secondAttribute="leading" constant="10" id="3EM-gr-Hhj"/>
+                                    <constraint firstItem="s30-Dh-Z4Y" firstAttribute="leading" secondItem="mLb-LY-ZVf" secondAttribute="leading" constant="15" id="H7s-7e-LkG"/>
+                                    <constraint firstItem="TbS-Sg-4hg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="s30-Dh-Z4Y" secondAttribute="trailing" constant="10" id="UPb-N7-sbk"/>
+                                    <constraint firstAttribute="bottom" secondItem="s30-Dh-Z4Y" secondAttribute="bottom" constant="10" id="Y10-ap-QDk"/>
+                                    <constraint firstItem="s30-Dh-Z4Y" firstAttribute="top" secondItem="mLb-LY-ZVf" secondAttribute="top" constant="10" id="bn5-Nm-lEZ"/>
                                     <constraint firstAttribute="trailing" secondItem="TbS-Sg-4hg" secondAttribute="trailing" constant="15" id="htH-Jy-jU8"/>
                                     <constraint firstAttribute="bottom" secondItem="TbS-Sg-4hg" secondAttribute="bottom" constant="10" id="i3Q-Hg-esP"/>
                                     <constraint firstItem="TbS-Sg-4hg" firstAttribute="top" secondItem="mLb-LY-ZVf" secondAttribute="top" constant="10" id="yHI-To-z6f"/>
