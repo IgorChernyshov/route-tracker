@@ -19,17 +19,12 @@ class MapViewController: UIViewController {
   
   private var locationManager: CLLocationManager?
   
-  private var route: GMSPolyline?
+  private var route: RoutePolyline?
   private var routePath: GMSMutablePath?
 
   override func viewDidLoad() {
     super.viewDidLoad()
     configureLocationManager()
-  }
-  
-  fileprivate func configureRouteStyle() {
-    route?.strokeWidth = 7
-    route?.strokeColor = #colorLiteral(red: 0, green: 0.5628422499, blue: 0.3188166618, alpha: 1)
   }
   
   fileprivate func configureLocationManager() {
@@ -44,8 +39,7 @@ class MapViewController: UIViewController {
   private func startTracking() {
     switchTrackingButton.setTitle("Stop Tracking", for: .normal)
     route?.map = nil
-    route = GMSPolyline()
-    configureRouteStyle()
+    route = RoutePolyline()
     routePath = GMSMutablePath()
     route?.map = mapView
     locationManager?.startUpdatingLocation()
@@ -80,14 +74,11 @@ class MapViewController: UIViewController {
   
   private func loadPreviousRoute() {
     route?.map = nil
-    route = GMSPolyline()
-    configureRouteStyle()
+    route = RoutePolyline()
     routePath = DataService.instance.loadRoute()
     route?.path = routePath
-    route?.map = mapView    
-    guard let coordinate = routePath?.coordinate(at: 0) else { return }
-    let position = GMSCameraPosition.camera(withTarget: coordinate, zoom: 17)
-    mapView.animate(to: position)
+    route?.map = mapView
+    mapView.animate(with: GMSCameraUpdate.fit(GMSCoordinateBounds.init(path: (route?.path)!)))
   }
   
   @IBAction func showPreviousRouteButtonWasPressed(_ sender: Any) {
