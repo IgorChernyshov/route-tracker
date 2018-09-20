@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C302D4221537442009EA74E /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C302D4121537442009EA74E /* Coordinate.swift */; };
+		9C302D452153A70C009EA74E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C302D442153A70C009EA74E /* DataService.swift */; };
+		9C302D49215403EE009EA74E /* RoutePolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C302D48215403EE009EA74E /* RoutePolyline.swift */; };
 		9C6EBAA52152D01300D5BCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA42152D01300D5BCE9 /* AppDelegate.swift */; };
 		9C6EBAA72152D01300D5BCE9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */; };
 		9C6EBAAA2152D01300D5BCE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA82152D01300D5BCE9 /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 		0201A2193FC349FF8A2F7754 /* Pods_route_tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_route_tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C3196D942D0B0AFBDB360D /* Pods-route-tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-route-tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-route-tracker/Pods-route-tracker.release.xcconfig"; sourceTree = "<group>"; };
 		72FB4085F045619C8565C8F6 /* Pods-route-tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-route-tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-route-tracker/Pods-route-tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		9C302D4121537442009EA74E /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		9C302D442153A70C009EA74E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		9C302D48215403EE009EA74E /* RoutePolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePolyline.swift; sourceTree = "<group>"; };
 		9C6EBAA12152D01300D5BCE9 /* route-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "route-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6EBAA42152D01300D5BCE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +54,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9C302D3E21537104009EA74E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C302D4121537442009EA74E /* Coordinate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C302D3F21537109009EA74E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C302D48215403EE009EA74E /* RoutePolyline.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C302D4021537117009EA74E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9C302D432153A6FD009EA74E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9C302D442153A70C009EA74E /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		9C6EBA982152D01300D5BCE9 = {
 			isa = PBXGroup;
 			children = (
@@ -69,8 +107,11 @@
 		9C6EBAA32152D01300D5BCE9 /* route-tracker */ = {
 			isa = PBXGroup;
 			children = (
+				9C302D432153A6FD009EA74E /* Services */,
+				9C302D3E21537104009EA74E /* Model */,
+				9C302D3F21537109009EA74E /* View */,
+				9C302D4021537117009EA74E /* Controller */,
 				9C6EBAA42152D01300D5BCE9 /* AppDelegate.swift */,
-				9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */,
 				9C6EBAA82152D01300D5BCE9 /* Main.storyboard */,
 				9C6EBAAB2152D01400D5BCE9 /* Assets.xcassets */,
 				9C6EBAAD2152D01400D5BCE9 /* LaunchScreen.storyboard */,
@@ -100,6 +141,7 @@
 				9C6EBA9E2152D01300D5BCE9 /* Frameworks */,
 				9C6EBA9F2152D01300D5BCE9 /* Resources */,
 				0610D48695FCDBB482EF1459 /* [CP] Copy Pods Resources */,
+				D444E9AC36E02EBFDBD8C81E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,6 +164,11 @@
 				TargetAttributes = {
 					9C6EBAA02152D01300D5BCE9 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -193,6 +240,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D444E9AC36E02EBFDBD8C81E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-route-tracker/Pods-route-tracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-route-tracker/Pods-route-tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -201,7 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C6EBAA72152D01300D5BCE9 /* MapViewController.swift in Sources */,
+				9C302D49215403EE009EA74E /* RoutePolyline.swift in Sources */,
 				9C6EBAA52152D01300D5BCE9 /* AppDelegate.swift in Sources */,
+				9C302D4221537442009EA74E /* Coordinate.swift in Sources */,
+				9C302D452153A70C009EA74E /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
