@@ -17,17 +17,14 @@ class DataService {
   private init() {}
   
   func saveRoute(_ route: GMSMutablePath) {
-    var routePath: [CLLocationCoordinate2D] = []
-    for i in 0..<route.count() {
-      routePath.append(route.coordinate(at: i))
-    }
-    let coordinates = routePath.compactMap { Coordinate(coordinate: $0) }
+    let routePathString = route.encodedPath()
+    let routePath = Path(path: routePathString)
     do {
       let realm = try Realm()
-      let oldRoute = realm.objects(Coordinate.self)
+      let oldRoute = realm.objects(Path.self)
       try realm.write {
         realm.delete(oldRoute)
-        realm.add(coordinates)
+        realm.add(routePath)
       }
     } catch {
       debugPrint(error.localizedDescription)
@@ -35,16 +32,11 @@ class DataService {
   }
   
   func loadRoute() -> GMSMutablePath {
-    let routePath = GMSMutablePath()
+    var routePath = GMSMutablePath()
     do {
       let realm = try Realm()
-      let savedRoute = realm.objects(Coordinate.self)
-      for coordinate in savedRoute {
-        var clCoordinate = CLLocationCoordinate2D()
-        clCoordinate.latitude = coordinate.latitude
-        clCoordinate.longitude = coordinate.longitude
-        routePath.add(clCoordinate)
-      }
+      let savedRoute = realm.objects(Path.self)
+      routePath = GMSMutablePath(fromEncodedPath: savedRoute.first?.path ?? String())!
     } catch {
       debugPrint(error.localizedDescription)
     }
