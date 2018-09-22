@@ -11,7 +11,7 @@ import GoogleMaps
 import RealmSwift
 
 class MapViewController: UIViewController {
-
+  
   @IBOutlet weak var mapView: GMSMapView!
   @IBOutlet weak var switchTrackingButton: UIButton!
   
@@ -21,7 +21,7 @@ class MapViewController: UIViewController {
   
   private var route: RoutePolyline?
   private var routePath: GMSMutablePath?
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     configureLocationManager()
@@ -34,6 +34,7 @@ class MapViewController: UIViewController {
     locationManager?.startMonitoringSignificantLocationChanges()
     locationManager?.requestAlwaysAuthorization()
     locationManager?.delegate = self
+    locationManager?.desiredAccuracy = kCLLocationAccuracyBest
   }
   
   private func startTracking() {
@@ -48,15 +49,9 @@ class MapViewController: UIViewController {
   private func stopTracking() {
     switchTrackingButton.setTitle("Start Tracking", for: .normal)
     locationManager?.stopUpdatingLocation()
-    guard let routePath = routePath else { return }
-    DataService.instance.saveRoute(routePath)
-  }
-
-  @IBAction func switchTrackingModeButtonWasPressed(_ sender: Any) {
-    if switchTrackingButton.title(for: .normal) == "Start Tracking" {
-      startTracking()
-    } else {
-      stopTracking()
+    DispatchQueue.global().async { [weak self] in
+      guard let routePath = self?.routePath else { return }
+      DataService.instance.saveRoute(routePath)
     }
   }
   
@@ -73,12 +68,28 @@ class MapViewController: UIViewController {
   }
   
   private func loadPreviousRoute() {
+    mapView.clear()
     route?.map = nil
     route = RoutePolyline()
     routePath = DataService.instance.loadRoute()
     route?.path = routePath
     route?.map = mapView
-    mapView.animate(with: GMSCameraUpdate.fit(GMSCoordinateBounds.init(path: (route?.path)!)))
+    guard let setBounds = routePath else { return }
+    let bounds = GMSCoordinateBounds(path: setBounds)
+    mapView.animate(with: GMSCameraUpdate.fit(bounds))
+  }
+  
+  private func setCameraAt(coordinate: CLLocationCoordinate2D) {
+    let position = GMSCameraPosition.camera(withTarget: coordinate, zoom: 17)
+    mapView.animate(to: position)
+  }
+  
+  @IBAction func switchTrackingModeButtonWasPressed(_ sender: Any) {
+    if switchTrackingButton.title(for: .normal) == "Start Tracking" {
+      startTracking()
+    } else {
+      stopTracking()
+    }
   }
   
   @IBAction func showPreviousRouteButtonWasPressed(_ sender: Any) {
@@ -96,12 +107,10 @@ extension MapViewController: CLLocationManagerDelegate {
     guard let location = locations.last else { return }
     routePath?.add(location.coordinate)
     route?.path = routePath
-    let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
-    mapView.animate(to: position)
+    setCameraAt(coordinate: location.coordinate)
   }
   
   func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
     debugPrint(error.localizedDescription)
-    stopTracking()
   }
 }
