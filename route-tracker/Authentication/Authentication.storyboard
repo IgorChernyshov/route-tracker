@@ -111,10 +111,43 @@
                     <view key="view" contentMode="scaleToFill" id="u7R-xA-7B1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9AE-hB-vWD">
+                                <rect key="frame" x="30" y="94" width="315" height="70"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="login" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oa0-zP-wiJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2j-IO-a04">
+                                        <rect key="frame" x="87" y="38" width="141" height="32"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <state key="normal" title="Recover password"/>
+                                        <connections>
+                                            <action selector="recoverPasswordButtonWasPressed:" destination="XbX-SS-qsS" eventType="touchUpInside" id="f6S-1B-hch"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oa0-zP-wiJ" firstAttribute="leading" secondItem="9AE-hB-vWD" secondAttribute="leading" id="gck-Ux-6Gg"/>
+                                    <constraint firstAttribute="trailing" secondItem="oa0-zP-wiJ" secondAttribute="trailing" id="guq-lG-1LX"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9AE-hB-vWD" firstAttribute="leading" secondItem="OmD-rk-egC" secondAttribute="leading" constant="30" id="D3t-Qy-Tzq"/>
+                            <constraint firstItem="9AE-hB-vWD" firstAttribute="top" secondItem="OmD-rk-egC" secondAttribute="top" constant="30" id="STC-nG-cLb"/>
+                            <constraint firstItem="OmD-rk-egC" firstAttribute="trailing" secondItem="9AE-hB-vWD" secondAttribute="trailing" constant="30" id="lr9-R6-fWf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OmD-rk-egC"/>
                     </view>
                     <navigationItem key="navigationItem" title="Recover Password" id="ZLM-ra-QlB"/>
+                    <connections>
+                        <outlet property="loginText" destination="oa0-zP-wiJ" id="FGp-Dv-Ch0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mt-Ww-lAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

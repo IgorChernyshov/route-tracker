@@ -49,6 +49,19 @@ class AuthenticationService {
     return false
   }
   
+  func recoverPassword(login: String) -> String {
+    do {
+      let realm = try Realm()
+      let user = realm.objects(User.self).filter("login = %@", login)
+      if !user.isEmpty {
+        return user[0].password
+      }
+    } catch {
+      debugPrint(error.localizedDescription)
+    }
+    return ""
+  }
+  
   private func checkPassword(user: User, insertedPassword: String) -> Bool {
     return user.password == insertedPassword
   }
