@@ -38,6 +38,10 @@ class AuthenticationService {
           realm.add(newUser)
         }
         return true
+      } else {
+        try realm.write {
+          user[0].password = password
+        }
       }
     } catch {
       debugPrint(error.localizedDescription)
