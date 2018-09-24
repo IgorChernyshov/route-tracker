@@ -12,7 +12,7 @@
 		9C302D49215403EE009EA74E /* RoutePolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C302D48215403EE009EA74E /* RoutePolyline.swift */; };
 		9C6EBAA52152D01300D5BCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA42152D01300D5BCE9 /* AppDelegate.swift */; };
 		9C6EBAA72152D01300D5BCE9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */; };
-		9C6EBAAA2152D01300D5BCE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA82152D01300D5BCE9 /* Main.storyboard */; };
+		9C6EBAAA2152D01300D5BCE9 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA82152D01300D5BCE9 /* Map.storyboard */; };
 		9C6EBAAC2152D01400D5BCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAAB2152D01400D5BCE9 /* Assets.xcassets */; };
 		9C6EBAAF2152D01400D5BCE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAAD2152D01400D5BCE9 /* LaunchScreen.storyboard */; };
 		9C9FF5D821594B5000EAA09B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FF5D721594B5000EAA09B /* User.swift */; };
@@ -29,7 +29,7 @@
 		9C6EBAA12152D01300D5BCE9 /* route-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "route-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6EBAA42152D01300D5BCE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		9C6EBAA92152D01300D5BCE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C6EBAA92152D01300D5BCE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Map.storyboard; sourceTree = "<group>"; };
 		9C6EBAAB2152D01400D5BCE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C6EBAAE2152D01400D5BCE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C6EBAB02152D01400D5BCE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,43 +56,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9C302D3E21537104009EA74E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				9C302D4121537442009EA74E /* Path.swift */,
-				9C9FF5D721594B5000EAA09B /* User.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		9C302D3F21537109009EA74E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				9C302D48215403EE009EA74E /* RoutePolyline.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		9C302D4021537117009EA74E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		9C302D432153A6FD009EA74E /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				9C302D442153A70C009EA74E /* DataService.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		9C6EBA982152D01300D5BCE9 = {
 			isa = PBXGroup;
 			children = (
 				9C6EBAA32152D01300D5BCE9 /* route-tracker */,
+				9C9FF5E621594E9F00EAA09B /* Configuration */,
+				9C9FF5E821594ED100EAA09B /* Resources */,
 				9C6EBAA22152D01300D5BCE9 /* Products */,
 				FF326E551D15AF0CC9DEAEDF /* Pods */,
 				3AC7F7542D8663231E36C15C /* Frameworks */,
@@ -110,17 +79,128 @@
 		9C6EBAA32152D01300D5BCE9 /* route-tracker */ = {
 			isa = PBXGroup;
 			children = (
-				9C302D432153A6FD009EA74E /* Services */,
-				9C302D3E21537104009EA74E /* Model */,
-				9C302D3F21537109009EA74E /* View */,
-				9C302D4021537117009EA74E /* Controller */,
+				9C9FF5D921594CA500EAA09B /* BusinessLogic */,
+				9C9FF5DE21594D7000EAA09B /* UI */,
 				9C6EBAA42152D01300D5BCE9 /* AppDelegate.swift */,
-				9C6EBAA82152D01300D5BCE9 /* Main.storyboard */,
-				9C6EBAAB2152D01400D5BCE9 /* Assets.xcassets */,
 				9C6EBAAD2152D01400D5BCE9 /* LaunchScreen.storyboard */,
-				9C6EBAB02152D01400D5BCE9 /* Info.plist */,
 			);
 			path = "route-tracker";
+			sourceTree = "<group>";
+		};
+		9C9FF5D921594CA500EAA09B /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				9C9FF5DA21594CB100EAA09B /* Library */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		9C9FF5DA21594CB100EAA09B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				9C9FF5DB21594CBC00EAA09B /* RealmConfigurator */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		9C9FF5DB21594CBC00EAA09B /* RealmConfigurator */ = {
+			isa = PBXGroup;
+			children = (
+				9C302D442153A70C009EA74E /* DataService.swift */,
+			);
+			path = RealmConfigurator;
+			sourceTree = "<group>";
+		};
+		9C9FF5DE21594D7000EAA09B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9C9FF5DF21594D8D00EAA09B /* Elements */,
+				9C9FF5E221594DE500EAA09B /* Modules */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9C9FF5DF21594D8D00EAA09B /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				9C9FF5E021594D9200EAA09B /* Basic */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		9C9FF5E021594D9200EAA09B /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				9C9FF5E121594DA100EAA09B /* Polyline */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		9C9FF5E121594DA100EAA09B /* Polyline */ = {
+			isa = PBXGroup;
+			children = (
+				9C302D48215403EE009EA74E /* RoutePolyline.swift */,
+			);
+			path = Polyline;
+			sourceTree = "<group>";
+		};
+		9C9FF5E221594DE500EAA09B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9C9FF5E321594E3700EAA09B /* Auth */,
+				9C9FF5E421594E3F00EAA09B /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9C9FF5E321594E3700EAA09B /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				9C9FF5D721594B5000EAA09B /* User.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		9C9FF5E421594E3F00EAA09B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9C9FF5E521594E5700EAA09B /* Map */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9C9FF5E521594E5700EAA09B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				9C6EBAA82152D01300D5BCE9 /* Map.storyboard */,
+				9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */,
+				9C302D4121537442009EA74E /* Path.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		9C9FF5E621594E9F00EAA09B /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				9C9FF5E721594EAF00EAA09B /* Release */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		9C9FF5E721594EAF00EAA09B /* Release */ = {
+			isa = PBXGroup;
+			children = (
+				9C6EBAB02152D01400D5BCE9 /* Info.plist */,
+			);
+			path = Release;
+			sourceTree = "<group>";
+		};
+		9C9FF5E821594ED100EAA09B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C6EBAAB2152D01400D5BCE9 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		FF326E551D15AF0CC9DEAEDF /* Pods */ = {
@@ -200,7 +280,7 @@
 			files = (
 				9C6EBAAF2152D01400D5BCE9 /* LaunchScreen.storyboard in Resources */,
 				9C6EBAAC2152D01400D5BCE9 /* Assets.xcassets in Resources */,
-				9C6EBAAA2152D01300D5BCE9 /* Main.storyboard in Resources */,
+				9C6EBAAA2152D01300D5BCE9 /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,12 +362,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9C6EBAA82152D01300D5BCE9 /* Main.storyboard */ = {
+		9C6EBAA82152D01300D5BCE9 /* Map.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9C6EBAA92152D01300D5BCE9 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Map.storyboard;
 			sourceTree = "<group>";
 		};
 		9C6EBAAD2152D01400D5BCE9 /* LaunchScreen.storyboard */ = {
