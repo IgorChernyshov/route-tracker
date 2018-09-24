@@ -15,6 +15,7 @@
 		9C6EBAAA2152D01300D5BCE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA82152D01300D5BCE9 /* Main.storyboard */; };
 		9C6EBAAC2152D01400D5BCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAAB2152D01400D5BCE9 /* Assets.xcassets */; };
 		9C6EBAAF2152D01400D5BCE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAAD2152D01400D5BCE9 /* LaunchScreen.storyboard */; };
+		9C9FF5D821594B5000EAA09B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FF5D721594B5000EAA09B /* User.swift */; };
 		B83A57FE2798C92C0C6FE883 /* Pods_route_tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0201A2193FC349FF8A2F7754 /* Pods_route_tracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		9C6EBAAB2152D01400D5BCE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C6EBAAE2152D01400D5BCE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C6EBAB02152D01400D5BCE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C9FF5D721594B5000EAA09B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				9C302D4121537442009EA74E /* Path.swift */,
+				9C9FF5D721594B5000EAA09B /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			files = (
 				9C6EBAA72152D01300D5BCE9 /* MapViewController.swift in Sources */,
 				9C302D49215403EE009EA74E /* RoutePolyline.swift in Sources */,
+				9C9FF5D821594B5000EAA09B /* User.swift in Sources */,
 				9C6EBAA52152D01300D5BCE9 /* AppDelegate.swift in Sources */,
 				9C302D4221537442009EA74E /* Path.swift in Sources */,
 				9C302D452153A70C009EA74E /* DataService.swift in Sources */,
