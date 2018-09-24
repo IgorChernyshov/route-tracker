@@ -67,25 +67,10 @@
 			children = (
 				9C1FBB49215962C80069CFBA /* Authentication.storyboard */,
 				9C1FBB4C215962FB0069CFBA /* SignInViewController.swift */,
-			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
-		9C1FBB45215962700069CFBA /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				9C302D442153A70C009EA74E /* RouteService.swift */,
 				9C1FBB4E215964ED0069CFBA /* AuthenticationService.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		9C1FBB472159628A0069CFBA /* Model */ = {
-			isa = PBXGroup;
-			children = (
 				9C9FF5D721594B5000EAA09B /* User.swift */,
 			);
-			path = Model;
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		9C6EBA982152D01300D5BCE9 = {
@@ -109,10 +94,8 @@
 		9C6EBAA32152D01300D5BCE9 /* route-tracker */ = {
 			isa = PBXGroup;
 			children = (
-				9C1FBB472159628A0069CFBA /* Model */,
 				9C9FF5E521594E5700EAA09B /* Map */,
 				9C1FBB44215962570069CFBA /* Authentication */,
-				9C1FBB45215962700069CFBA /* Services */,
 				9C6EBAA42152D01300D5BCE9 /* AppDelegate.swift */,
 				9C6EBAAD2152D01400D5BCE9 /* LaunchScreen.storyboard */,
 				9C6EBAAB2152D01400D5BCE9 /* Assets.xcassets */,
@@ -126,6 +109,7 @@
 			children = (
 				9C6EBAA82152D01300D5BCE9 /* Map.storyboard */,
 				9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */,
+				9C302D442153A70C009EA74E /* RouteService.swift */,
 				9C302D4121537442009EA74E /* Path.swift */,
 				9C302D48215403EE009EA74E /* RoutePolyline.swift */,
 			);

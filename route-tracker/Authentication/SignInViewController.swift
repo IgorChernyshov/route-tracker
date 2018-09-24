@@ -20,11 +20,21 @@ class SignInViewController: UIViewController {
     else {
       return
     }
-    
+    if AuthenticationService.instance.signInUser(login: login, password: password) {
+      UserDefaults.standard.set(true, forKey: "userIsLoggedIn")
+    }
   }
   
   @IBAction func registerButtonWasPressed(_ sender: Any) {
-    
+    guard
+      let login = loginText.text,
+      let password = passwordText.text
+      else {
+        return
+    }
+    if AuthenticationService.instance.registerUser(login: login, password: password) {
+      UserDefaults.standard.set(true, forKey: "userIsLoggedIn")
+    }
   }
   
   @IBAction func forgotPasswordButtonWasPressed(_ sender: Any) {
