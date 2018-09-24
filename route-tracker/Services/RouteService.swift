@@ -10,9 +10,9 @@ import Foundation
 import RealmSwift
 import GoogleMaps
 
-class DataService {
+class RouteService {
   
-  static let instance = DataService()
+  static let instance = RouteService()
   
   private init() {}
   
