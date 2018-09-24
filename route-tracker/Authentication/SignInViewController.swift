@@ -22,6 +22,7 @@ class SignInViewController: UIViewController {
     }
     if AuthenticationService.instance.signInUser(login: login, password: password) {
       UserDefaults.standard.set(true, forKey: "userIsLoggedIn")
+      performSegue(withIdentifier: "toMain", sender: sender)
     }
   }
   
@@ -34,10 +35,15 @@ class SignInViewController: UIViewController {
     }
     if AuthenticationService.instance.registerUser(login: login, password: password) {
       UserDefaults.standard.set(true, forKey: "userIsLoggedIn")
+      performSegue(withIdentifier: "toMain", sender: sender)
     }
   }
   
   @IBAction func forgotPasswordButtonWasPressed(_ sender: Any) {
+    performSegue(withIdentifier: "toForgotPassword", sender: sender)
+  }
+  
+  @IBAction func logout(_ segue: UIStoryboardSegue) {
     
   }
   
