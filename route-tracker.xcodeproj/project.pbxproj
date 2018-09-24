@@ -12,12 +12,15 @@
 		9C1FBB4F215964ED0069CFBA /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBB4E215964ED0069CFBA /* AuthenticationService.swift */; };
 		9C1FBB5121596BC80069CFBA /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBB5021596BC80069CFBA /* ForgotPasswordViewController.swift */; };
 		9C1FBB5321596D9D0069CFBA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBB5221596D9D0069CFBA /* MainViewController.swift */; };
+		9C1FBB57215972BC0069CFBA /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1FBB56215972BC0069CFBA /* Launch.storyboard */; };
+		9C1FBB59215972E80069CFBA /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBB58215972E80069CFBA /* LaunchViewController.swift */; };
+		9C1FBB5B215973750069CFBA /* RootSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBB5A215973750069CFBA /* RootSegue.swift */; };
 		9C302D4221537442009EA74E /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C302D4121537442009EA74E /* Path.swift */; };
 		9C302D452153A70C009EA74E /* RouteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C302D442153A70C009EA74E /* RouteService.swift */; };
 		9C302D49215403EE009EA74E /* RoutePolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C302D48215403EE009EA74E /* RoutePolyline.swift */; };
 		9C6EBAA52152D01300D5BCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA42152D01300D5BCE9 /* AppDelegate.swift */; };
 		9C6EBAA72152D01300D5BCE9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */; };
-		9C6EBAAA2152D01300D5BCE9 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA82152D01300D5BCE9 /* Map.storyboard */; };
+		9C6EBAAA2152D01300D5BCE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA82152D01300D5BCE9 /* Main.storyboard */; };
 		9C6EBAAC2152D01400D5BCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAAB2152D01400D5BCE9 /* Assets.xcassets */; };
 		9C6EBAAF2152D01400D5BCE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAAD2152D01400D5BCE9 /* LaunchScreen.storyboard */; };
 		9C9FF5D821594B5000EAA09B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FF5D721594B5000EAA09B /* User.swift */; };
@@ -33,13 +36,16 @@
 		9C1FBB4E215964ED0069CFBA /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		9C1FBB5021596BC80069CFBA /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		9C1FBB5221596D9D0069CFBA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9C1FBB56215972BC0069CFBA /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		9C1FBB58215972E80069CFBA /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		9C1FBB5A215973750069CFBA /* RootSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootSegue.swift; sourceTree = "<group>"; };
 		9C302D4121537442009EA74E /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		9C302D442153A70C009EA74E /* RouteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteService.swift; sourceTree = "<group>"; };
 		9C302D48215403EE009EA74E /* RoutePolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePolyline.swift; sourceTree = "<group>"; };
 		9C6EBAA12152D01300D5BCE9 /* route-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "route-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6EBAA42152D01300D5BCE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		9C6EBAA92152D01300D5BCE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Map.storyboard; sourceTree = "<group>"; };
+		9C6EBAA92152D01300D5BCE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C6EBAAB2152D01400D5BCE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C6EBAAE2152D01400D5BCE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C6EBAB02152D01400D5BCE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,6 +84,26 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		9C1FBB542159729A0069CFBA /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				9C1FBB55215972AB0069CFBA /* Launch */,
+				9C1FBB44215962570069CFBA /* Authentication */,
+				9C9FF5E521594E5700EAA09B /* Map */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		9C1FBB55215972AB0069CFBA /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				9C1FBB56215972BC0069CFBA /* Launch.storyboard */,
+				9C1FBB58215972E80069CFBA /* LaunchViewController.swift */,
+				9C1FBB5A215973750069CFBA /* RootSegue.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
 		9C6EBA982152D01300D5BCE9 = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +125,7 @@
 		9C6EBAA32152D01300D5BCE9 /* route-tracker */ = {
 			isa = PBXGroup;
 			children = (
-				9C9FF5E521594E5700EAA09B /* Map */,
-				9C1FBB44215962570069CFBA /* Authentication */,
+				9C1FBB542159729A0069CFBA /* Flows */,
 				9C6EBAA42152D01300D5BCE9 /* AppDelegate.swift */,
 				9C6EBAAD2152D01400D5BCE9 /* LaunchScreen.storyboard */,
 				9C6EBAAB2152D01400D5BCE9 /* Assets.xcassets */,
@@ -112,7 +137,7 @@
 		9C9FF5E521594E5700EAA09B /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				9C6EBAA82152D01300D5BCE9 /* Map.storyboard */,
+				9C6EBAA82152D01300D5BCE9 /* Main.storyboard */,
 				9C1FBB5221596D9D0069CFBA /* MainViewController.swift */,
 				9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */,
 				9C302D442153A70C009EA74E /* RouteService.swift */,
@@ -198,9 +223,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C1FBB4A215962C80069CFBA /* Authentication.storyboard in Resources */,
+				9C1FBB57215972BC0069CFBA /* Launch.storyboard in Resources */,
 				9C6EBAAF2152D01400D5BCE9 /* LaunchScreen.storyboard in Resources */,
 				9C6EBAAC2152D01400D5BCE9 /* Assets.xcassets in Resources */,
-				9C6EBAAA2152D01300D5BCE9 /* Map.storyboard in Resources */,
+				9C6EBAAA2152D01300D5BCE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,11 +299,13 @@
 				9C1FBB4D215962FB0069CFBA /* SignInViewController.swift in Sources */,
 				9C6EBAA72152D01300D5BCE9 /* MapViewController.swift in Sources */,
 				9C302D49215403EE009EA74E /* RoutePolyline.swift in Sources */,
+				9C1FBB5B215973750069CFBA /* RootSegue.swift in Sources */,
 				9C9FF5D821594B5000EAA09B /* User.swift in Sources */,
 				9C6EBAA52152D01300D5BCE9 /* AppDelegate.swift in Sources */,
 				9C1FBB5121596BC80069CFBA /* ForgotPasswordViewController.swift in Sources */,
 				9C302D4221537442009EA74E /* Path.swift in Sources */,
 				9C302D452153A70C009EA74E /* RouteService.swift in Sources */,
+				9C1FBB59215972E80069CFBA /* LaunchViewController.swift in Sources */,
 				9C1FBB4F215964ED0069CFBA /* AuthenticationService.swift in Sources */,
 				9C1FBB5321596D9D0069CFBA /* MainViewController.swift in Sources */,
 			);
@@ -286,12 +314,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9C6EBAA82152D01300D5BCE9 /* Map.storyboard */ = {
+		9C6EBAA82152D01300D5BCE9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9C6EBAA92152D01300D5BCE9 /* Base */,
 			);
-			name = Map.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		9C6EBAAD2152D01400D5BCE9 /* LaunchScreen.storyboard */ = {

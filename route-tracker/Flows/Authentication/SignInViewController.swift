@@ -43,8 +43,4 @@ class SignInViewController: UIViewController {
     performSegue(withIdentifier: "toForgotPassword", sender: sender)
   }
   
-  @IBAction func logout(_ segue: UIStoryboardSegue) {
-    
-  }
-  
 }
