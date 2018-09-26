@@ -14,8 +14,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
+  
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    
     GMSServices.provideAPIKey("AIzaSyCDKMYs7o3NaT9unP90OH-xh1aLs_nhKYc")
+    
+    let controller: UIViewController
+    if UserDefaults.standard.bool(forKey: "userIsLoggedIn") {
+      controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(MainMenuViewController.self)
+    } else {
+      controller = UIStoryboard(name: "Authentication", bundle: nil).instantiateViewController(SignInViewController.self)
+    }
+    window = UIWindow()
+    
+    window?.rootViewController = UINavigationController(rootViewController: controller)
+    
+    window?.makeKeyAndVisible()
+    
     return true
   }
 
