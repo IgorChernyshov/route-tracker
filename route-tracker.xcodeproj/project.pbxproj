@@ -72,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				9C1FBB49215962C80069CFBA /* Authentication.storyboard */,
-				9C9FF5D721594B5000EAA09B /* User.swift */,
 				9C47281F215BC89600C75F81 /* SignIn */,
 				9C472820215BC89C00C75F81 /* ForgotPassword */,
 			);
@@ -93,6 +92,7 @@
 			children = (
 				9C472811215BC2F700C75F81 /* Library */,
 				9C472810215BC28800C75F81 /* AppDelegate */,
+				9C55AA94215BF1E0005CE01D /* Entity */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -241,9 +241,17 @@
 			isa = PBXGroup;
 			children = (
 				9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */,
-				9C302D4121537442009EA74E /* Path.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		9C55AA94215BF1E0005CE01D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				9C9FF5D721594B5000EAA09B /* User.swift */,
+				9C302D4121537442009EA74E /* Path.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		9C6EBA982152D01300D5BCE9 = {
