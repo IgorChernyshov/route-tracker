@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zQY-Fe-Jay">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,11 +14,11 @@
             <objects>
                 <viewController id="uOo-Pd-NVf" customClass="MainMenuViewController" customModule="route_tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YaC-uJ-Qij">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F4H-Ch-bL9">
-                                <rect key="frame" x="259.5" y="264" width="81" height="72"/>
+                                <rect key="frame" x="147" y="297.5" width="81" height="72"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ild-G5-StZ">
                                         <rect key="frame" x="0.0" y="0.0" width="81" height="32"/>
@@ -35,49 +38,48 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zT-Hw-iZc">
+                                <rect key="frame" x="131" y="60" width="113.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="3zT-Hw-iZc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dGl-wb-IwN" secondAttribute="leading" constant="10" id="1P8-Xu-Ymy"/>
+                            <constraint firstItem="F4H-Ch-bL9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3zT-Hw-iZc" secondAttribute="bottom" constant="20" id="513-Kl-6HT"/>
                             <constraint firstItem="F4H-Ch-bL9" firstAttribute="centerY" secondItem="YaC-uJ-Qij" secondAttribute="centerY" id="Gm0-Wp-G2z"/>
+                            <constraint firstItem="3zT-Hw-iZc" firstAttribute="top" secondItem="dGl-wb-IwN" secondAttribute="top" constant="40" id="dGo-rA-elK"/>
                             <constraint firstItem="F4H-Ch-bL9" firstAttribute="centerX" secondItem="YaC-uJ-Qij" secondAttribute="centerX" id="fK0-ne-SgI"/>
+                            <constraint firstItem="dGl-wb-IwN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3zT-Hw-iZc" secondAttribute="trailing" constant="10" id="iDo-sw-Ckc"/>
+                            <constraint firstItem="3zT-Hw-iZc" firstAttribute="centerX" secondItem="YaC-uJ-Qij" secondAttribute="centerX" id="lO9-jl-0dV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dGl-wb-IwN"/>
                     </view>
                     <navigationItem key="navigationItem" title="Main Menu" id="YWM-fI-8Pa"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="toMap" id="B4e-3T-5Ge"/>
-                        <segue destination="Veh-YN-9J7" kind="custom" identifier="toLaunch" customClass="RootSegue" customModule="route_tracker" customModuleProvider="target" id="Fxz-Pe-Qfv"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="703-dn-KCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="124" y="26.53673163418291"/>
-        </scene>
-        <!--Launch-->
-        <scene sceneID="qtn-O9-s1D">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Launch" id="Veh-YN-9J7" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5xN-gG-YY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="754" y="-373"/>
         </scene>
         <!--Map-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="route_tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHj-qi-Cje" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="114" width="600" height="486"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                                 <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLb-LY-ZVf" userLabel="Buttons View">
-                                <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbS-Sg-4hg">
-                                        <rect key="frame" x="480" y="10" width="105" height="30"/>
+                                        <rect key="frame" x="255" y="10" width="105" height="30"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <state key="normal" title="Start Tracking"/>
                                         <connections>
@@ -127,24 +129,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="27.436281859070466"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="emd-cq-dJ9">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zQY-Fe-Jay" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Uu-mN-UXC">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="uOo-Pd-NVf" kind="relationship" relationship="rootViewController" id="peF-Zy-DLa"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yNI-HV-Ra5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-815.20000000000005" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>
