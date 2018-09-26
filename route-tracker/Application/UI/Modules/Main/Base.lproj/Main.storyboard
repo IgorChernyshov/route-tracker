@@ -12,7 +12,7 @@
         <!--Main Menu-->
         <scene sceneID="vaN-EE-ItG">
             <objects>
-                <viewController id="uOo-Pd-NVf" customClass="MainMenuViewController" customModule="route_tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenuViewController" id="uOo-Pd-NVf" customClass="MainMenuViewController" customModule="route_tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YaC-uJ-Qij">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,7 +66,7 @@
         <!--Map-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="route_tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="BYZ-38-t0r" customClass="MapViewController" customModule="route_tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

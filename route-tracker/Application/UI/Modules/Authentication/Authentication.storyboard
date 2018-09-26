@@ -12,7 +12,7 @@
         <!--Sign In-->
         <scene sceneID="CCK-cV-heN">
             <objects>
-                <viewController id="hGO-9c-SbL" customClass="SignInViewController" customModule="route_tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" id="hGO-9c-SbL" customClass="SignInViewController" customModule="route_tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KQW-Ev-Hhz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,7 +97,7 @@
         <!--Recover Password-->
         <scene sceneID="RFf-r9-e0A">
             <objects>
-                <viewController id="XbX-SS-qsS" customClass="ForgotPasswordViewController" customModule="route_tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecoverPasswordViewController" id="XbX-SS-qsS" customClass="RecoverPasswordViewController" customModule="route_tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u7R-xA-7B1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

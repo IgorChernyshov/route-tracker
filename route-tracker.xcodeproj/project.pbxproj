@@ -10,7 +10,7 @@
 		9C1FBB4A215962C80069CFBA /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1FBB49215962C80069CFBA /* Authentication.storyboard */; };
 		9C1FBB4D215962FB0069CFBA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBB4C215962FB0069CFBA /* SignInViewController.swift */; };
 		9C1FBB4F215964ED0069CFBA /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBB4E215964ED0069CFBA /* AuthenticationService.swift */; };
-		9C1FBB5121596BC80069CFBA /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBB5021596BC80069CFBA /* ForgotPasswordViewController.swift */; };
+		9C1FBB5121596BC80069CFBA /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBB5021596BC80069CFBA /* RecoverPasswordViewController.swift */; };
 		9C1FBB5321596D9D0069CFBA /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBB5221596D9D0069CFBA /* MainMenuViewController.swift */; };
 		9C1FBB5B215973750069CFBA /* RootSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBB5A215973750069CFBA /* RootSegue.swift */; };
 		9C302D4221537442009EA74E /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C302D4121537442009EA74E /* Path.swift */; };
@@ -32,7 +32,7 @@
 		9C1FBB49215962C80069CFBA /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		9C1FBB4C215962FB0069CFBA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		9C1FBB4E215964ED0069CFBA /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
-		9C1FBB5021596BC80069CFBA /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		9C1FBB5021596BC80069CFBA /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 		9C1FBB5221596D9D0069CFBA /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		9C1FBB5A215973750069CFBA /* RootSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootSegue.swift; sourceTree = "<group>"; };
 		9C302D4121537442009EA74E /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
@@ -224,7 +224,7 @@
 		9C472820215BC89C00C75F81 /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
-				9C1FBB5021596BC80069CFBA /* ForgotPasswordViewController.swift */,
+				9C1FBB5021596BC80069CFBA /* RecoverPasswordViewController.swift */,
 			);
 			path = ForgotPassword;
 			sourceTree = "<group>";
@@ -439,7 +439,7 @@
 				9C1FBB5B215973750069CFBA /* RootSegue.swift in Sources */,
 				9C9FF5D821594B5000EAA09B /* User.swift in Sources */,
 				9C6EBAA52152D01300D5BCE9 /* AppDelegate.swift in Sources */,
-				9C1FBB5121596BC80069CFBA /* ForgotPasswordViewController.swift in Sources */,
+				9C1FBB5121596BC80069CFBA /* RecoverPasswordViewController.swift in Sources */,
 				9C302D4221537442009EA74E /* Path.swift in Sources */,
 				9C302D452153A70C009EA74E /* RouteService.swift in Sources */,
 				9C1FBB4F215964ED0069CFBA /* AuthenticationService.swift in Sources */,
