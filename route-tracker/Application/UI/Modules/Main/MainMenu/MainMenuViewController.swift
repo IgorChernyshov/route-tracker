@@ -20,3 +20,19 @@ class MainMenuViewController: UIViewController {
   }
   
 }
+
+final class MainMenuRouter: BaseRouter {
+  func toMap() {
+    let controller = UIStoryboard(name: "Main", bundle: nil)
+      .instantiateViewController(MapViewController.self)
+    
+    show(controller)
+  }
+  
+  func toSignIn() {
+    let controller = UIStoryboard(name: "Authentication", bundle: nil)
+      .instantiateViewController(SignInViewController.self)
+    
+    setAsRoot(UINavigationController(rootViewController: controller))
+  }
+}
