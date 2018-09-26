@@ -1,5 +1,5 @@
 //
-//  ForgotPasswordViewController.swift
+//  RecoverPasswordViewController.swift
 //  route-tracker
 //
 //  Created by Igor Chernyshov on 24.09.2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ForgotPasswordViewController: UIViewController {
+class RecoverPasswordViewController: UIViewController {
 
   @IBOutlet weak var loginText: UITextField!
   
