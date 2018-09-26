@@ -16,6 +16,8 @@
 		9C302D4221537442009EA74E /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C302D4121537442009EA74E /* Path.swift */; };
 		9C302D452153A70C009EA74E /* RouteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C302D442153A70C009EA74E /* RouteService.swift */; };
 		9C302D49215403EE009EA74E /* RoutePolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C302D48215403EE009EA74E /* RoutePolyline.swift */; };
+		9C55AA97215BF349005CE01D /* GetViewControllerStoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55AA96215BF349005CE01D /* GetViewControllerStoryboardID.swift */; };
+		9C55AA9A215BF78C005CE01D /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55AA99215BF78C005CE01D /* BaseRouter.swift */; };
 		9C6EBAA52152D01300D5BCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA42152D01300D5BCE9 /* AppDelegate.swift */; };
 		9C6EBAA72152D01300D5BCE9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */; };
 		9C6EBAAA2152D01300D5BCE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA82152D01300D5BCE9 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		9C302D4121537442009EA74E /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		9C302D442153A70C009EA74E /* RouteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteService.swift; sourceTree = "<group>"; };
 		9C302D48215403EE009EA74E /* RoutePolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePolyline.swift; sourceTree = "<group>"; };
+		9C55AA96215BF349005CE01D /* GetViewControllerStoryboardID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetViewControllerStoryboardID.swift; sourceTree = "<group>"; };
+		9C55AA99215BF78C005CE01D /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		9C6EBAA12152D01300D5BCE9 /* route-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "route-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6EBAA42152D01300D5BCE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +94,7 @@
 		9C47280F215BC21C00C75F81 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
-				9C472811215BC2F700C75F81 /* Library */,
+				9C472811215BC2F700C75F81 /* Realm */,
 				9C472810215BC28800C75F81 /* AppDelegate */,
 				9C55AA94215BF1E0005CE01D /* Entity */,
 			);
@@ -105,12 +109,12 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		9C472811215BC2F700C75F81 /* Library */ = {
+		9C472811215BC2F700C75F81 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
 				9C472812215BC30400C75F81 /* RealmConfigurator */,
 			);
-			path = Library;
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		9C472812215BC30400C75F81 /* RealmConfigurator */ = {
@@ -158,6 +162,7 @@
 		9C472817215BC5AA00C75F81 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				9C55AA95215BF2FD005CE01D /* UIKit */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 		9C47281D215BC7D400C75F81 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9C55AA99215BF78C005CE01D /* BaseRouter.swift */,
 				9C1FBB44215962570069CFBA /* Authentication */,
 				9C9FF5E521594E5700EAA09B /* Main */,
 			);
@@ -252,6 +258,14 @@
 				9C302D4121537442009EA74E /* Path.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		9C55AA95215BF2FD005CE01D /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				9C55AA96215BF349005CE01D /* GetViewControllerStoryboardID.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		9C6EBA982152D01300D5BCE9 = {
@@ -444,9 +458,11 @@
 				9C1FBB4D215962FB0069CFBA /* SignInViewController.swift in Sources */,
 				9C6EBAA72152D01300D5BCE9 /* MapViewController.swift in Sources */,
 				9C302D49215403EE009EA74E /* RoutePolyline.swift in Sources */,
+				9C55AA97215BF349005CE01D /* GetViewControllerStoryboardID.swift in Sources */,
 				9C1FBB5B215973750069CFBA /* RootSegue.swift in Sources */,
 				9C9FF5D821594B5000EAA09B /* User.swift in Sources */,
 				9C6EBAA52152D01300D5BCE9 /* AppDelegate.swift in Sources */,
+				9C55AA9A215BF78C005CE01D /* BaseRouter.swift in Sources */,
 				9C1FBB5121596BC80069CFBA /* RecoverPasswordViewController.swift in Sources */,
 				9C302D4221537442009EA74E /* Path.swift in Sources */,
 				9C302D452153A70C009EA74E /* RouteService.swift in Sources */,
