@@ -58,8 +58,12 @@
                         <viewLayoutGuide key="safeArea" id="dGl-wb-IwN"/>
                     </view>
                     <navigationItem key="navigationItem" title="Main Menu" id="YWM-fI-8Pa"/>
+                    <connections>
+                        <outlet property="router" destination="XpC-wJ-K5r" id="gHk-5M-vPp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="703-dn-KCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="XpC-wJ-K5r" customClass="MainMenuRouter" customModule="route_tracker" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="124" y="26.53673163418291"/>
         </scene>

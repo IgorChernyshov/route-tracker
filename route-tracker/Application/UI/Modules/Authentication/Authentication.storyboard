@@ -88,9 +88,11 @@
                     <connections>
                         <outlet property="loginText" destination="flF-rV-0zc" id="yjO-Qg-Kpv"/>
                         <outlet property="passwordText" destination="jpw-3Z-21o" id="fIs-GY-ADu"/>
+                        <outlet property="router" destination="gt5-Ep-LEB" id="Bez-SH-rBo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAu-FM-aCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="gt5-Ep-LEB" customClass="SignInRouter" customModule="route_tracker" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1020" y="186.65667166416793"/>
         </scene>

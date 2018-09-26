@@ -12,7 +12,7 @@ class SignInViewController: UIViewController {
 
   @IBOutlet weak var loginText: UITextField!
   @IBOutlet weak var passwordText: UITextField!
-  @IBOutlet weak var signInRouter: SignInRouter!
+  @IBOutlet weak var router: SignInRouter!
   
   @IBAction func signInButtonWasPressed(_ sender: Any) {
     guard
@@ -23,7 +23,7 @@ class SignInViewController: UIViewController {
     }
     if AuthenticationService.instance.signInUser(login: login, password: password) {
       UserDefaults.standard.set(true, forKey: "userIsLoggedIn")
-      performSegue(withIdentifier: "toMain", sender: sender)
+      router.toMain()
     }
   }
   
@@ -36,12 +36,12 @@ class SignInViewController: UIViewController {
     }
     if AuthenticationService.instance.registerUser(login: login, password: password) {
       UserDefaults.standard.set(true, forKey: "userIsLoggedIn")
-      performSegue(withIdentifier: "toMain", sender: sender)
+      router.toMain()
     }
   }
   
   @IBAction func forgotPasswordButtonWasPressed(_ sender: Any) {
-    performSegue(withIdentifier: "toForgotPassword", sender: sender)
+    router.toRecover()
   }
   
 }
@@ -54,7 +54,7 @@ final class SignInRouter: BaseRouter {
     setAsRoot(UINavigationController(rootViewController: controller))
   }
   
-  func onRecover() {
+  func toRecover() {
     let controller = UIStoryboard(name: "Authentication", bundle: nil)
       .instantiateViewController(RecoverPasswordViewController.self)
     

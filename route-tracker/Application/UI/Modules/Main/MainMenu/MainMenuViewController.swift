@@ -9,7 +9,9 @@
 import UIKit
 
 class MainMenuViewController: UIViewController {
-
+  
+  @IBOutlet var router: MainMenuRouter!
+  
   @IBAction func showMapButtonWasPressed(_ sender: Any) {
     performSegue(withIdentifier: "toMap", sender: sender)
   }
