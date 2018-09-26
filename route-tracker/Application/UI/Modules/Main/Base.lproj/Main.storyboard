@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Menu-->
+        <!--Controller-->
         <scene sceneID="vaN-EE-ItG">
             <objects>
                 <viewController storyboardIdentifier="MainMenuViewController" id="uOo-Pd-NVf" customClass="MainMenuViewController" customModule="route_tracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,7 +63,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="703-dn-KCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="XpC-wJ-K5r" customClass="MainMenuRouter" customModule="route_tracker" customModuleProvider="target"/>
+                <customObject id="XpC-wJ-K5r" customClass="MainMenuRouter" customModule="route_tracker" customModuleProvider="target">
+                    <connections>
+                        <outlet property="controller" destination="uOo-Pd-NVf" id="NVL-Wq-euG"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="124" y="26.53673163418291"/>
         </scene>

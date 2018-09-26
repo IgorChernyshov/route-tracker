@@ -23,5 +23,4 @@ class BaseRouter: NSObject {
   func setAsRoot(_ controller: UIViewController) {
     UIApplication.shared.delegate?.window??.rootViewController = controller
   }
-  
 }

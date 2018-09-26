@@ -12,7 +12,6 @@
 		9C1FBB4F215964ED0069CFBA /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBB4E215964ED0069CFBA /* AuthenticationService.swift */; };
 		9C1FBB5121596BC80069CFBA /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBB5021596BC80069CFBA /* RecoverPasswordViewController.swift */; };
 		9C1FBB5321596D9D0069CFBA /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBB5221596D9D0069CFBA /* MainMenuViewController.swift */; };
-		9C1FBB5B215973750069CFBA /* RootSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBB5A215973750069CFBA /* RootSegue.swift */; };
 		9C302D4221537442009EA74E /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C302D4121537442009EA74E /* Path.swift */; };
 		9C302D452153A70C009EA74E /* RouteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C302D442153A70C009EA74E /* RouteService.swift */; };
 		9C302D49215403EE009EA74E /* RoutePolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C302D48215403EE009EA74E /* RoutePolyline.swift */; };
@@ -36,7 +35,6 @@
 		9C1FBB4E215964ED0069CFBA /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		9C1FBB5021596BC80069CFBA /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 		9C1FBB5221596D9D0069CFBA /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
-		9C1FBB5A215973750069CFBA /* RootSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootSegue.swift; sourceTree = "<group>"; };
 		9C302D4121537442009EA74E /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		9C302D442153A70C009EA74E /* RouteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteService.swift; sourceTree = "<group>"; };
 		9C302D48215403EE009EA74E /* RoutePolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePolyline.swift; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 		9C47281C215BC78700C75F81 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				9C47281E215BC83900C75F81 /* UIStoryboardSegue */,
 				9C47281B215BC6BF00C75F81 /* GMSPolyline */,
 			);
 			path = Basic;
@@ -209,14 +206,6 @@
 				9C9FF5E521594E5700EAA09B /* Main */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		9C47281E215BC83900C75F81 /* UIStoryboardSegue */ = {
-			isa = PBXGroup;
-			children = (
-				9C1FBB5A215973750069CFBA /* RootSegue.swift */,
-			);
-			path = UIStoryboardSegue;
 			sourceTree = "<group>";
 		};
 		9C47281F215BC89600C75F81 /* SignIn */ = {
@@ -459,7 +448,6 @@
 				9C6EBAA72152D01300D5BCE9 /* MapViewController.swift in Sources */,
 				9C302D49215403EE009EA74E /* RoutePolyline.swift in Sources */,
 				9C55AA97215BF349005CE01D /* GetViewControllerStoryboardID.swift in Sources */,
-				9C1FBB5B215973750069CFBA /* RootSegue.swift in Sources */,
 				9C9FF5D821594B5000EAA09B /* User.swift in Sources */,
 				9C6EBAA52152D01300D5BCE9 /* AppDelegate.swift in Sources */,
 				9C55AA9A215BF78C005CE01D /* BaseRouter.swift in Sources */,
