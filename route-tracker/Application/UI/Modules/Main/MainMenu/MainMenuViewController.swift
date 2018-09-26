@@ -13,12 +13,12 @@ class MainMenuViewController: UIViewController {
   @IBOutlet var router: MainMenuRouter!
   
   @IBAction func showMapButtonWasPressed(_ sender: Any) {
-    performSegue(withIdentifier: "toMap", sender: sender)
+    router.toMap()
   }
   
   @IBAction func logoutButtonWasPressed(_ sender: Any) {
     UserDefaults.standard.set(false, forKey: "userIsLoggedIn")
-    performSegue(withIdentifier: "toLaunch", sender: sender)
+    router.toSignIn()
   }
   
 }
