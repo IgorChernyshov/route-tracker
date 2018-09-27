@@ -30,13 +30,13 @@
                                         <rect key="frame" x="20" y="0.0" width="315" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jpw-3Z-21o">
                                         <rect key="frame" x="20" y="38" width="315" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTM-JX-pWG">
                                         <rect key="frame" x="151" y="76" width="53" height="32"/>
@@ -115,7 +115,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2j-IO-a04">
                                         <rect key="frame" x="87" y="38" width="141" height="32"/>
