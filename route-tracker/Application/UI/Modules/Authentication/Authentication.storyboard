@@ -89,6 +89,7 @@
                         <outlet property="loginText" destination="flF-rV-0zc" id="yjO-Qg-Kpv"/>
                         <outlet property="passwordText" destination="jpw-3Z-21o" id="fIs-GY-ADu"/>
                         <outlet property="router" destination="gt5-Ep-LEB" id="Bez-SH-rBo"/>
+                        <outlet property="signInButton" destination="gTM-JX-pWG" id="zXb-se-b3U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAu-FM-aCr" userLabel="First Responder" sceneMemberID="firstResponder"/>

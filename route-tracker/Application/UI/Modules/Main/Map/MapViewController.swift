@@ -17,7 +17,7 @@ class MapViewController: UIViewController {
   
   private var beginBackgroundTask: UIBackgroundTaskIdentifier?
   
-  private var locationManager: CLLocationManager?
+  private let locationManager = LocationManager.instance
   
   private var route: RoutePolyline?
   private var routePath: GMSMutablePath?
@@ -27,14 +27,16 @@ class MapViewController: UIViewController {
     configureLocationManager()
   }
   
-  fileprivate func configureLocationManager() {
-    locationManager = CLLocationManager()
-    locationManager?.allowsBackgroundLocationUpdates = true
-    locationManager?.pausesLocationUpdatesAutomatically = false
-    locationManager?.startMonitoringSignificantLocationChanges()
-    locationManager?.requestAlwaysAuthorization()
-    locationManager?.delegate = self
-    locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+  private func configureLocationManager() {
+    locationManager
+    .location
+    .asObservable()
+    .bind { [weak self] location in
+      guard let location = location else { return }
+      self?.routePath?.add(location.coordinate)
+      self?.route?.path = self?.routePath
+      self?.setCameraAt(coordinate: location.coordinate)
+    }
   }
   
   private func startTracking() {
@@ -43,12 +45,12 @@ class MapViewController: UIViewController {
     route = RoutePolyline()
     routePath = GMSMutablePath()
     route?.map = mapView
-    locationManager?.startUpdatingLocation()
+    locationManager.startUpdatingLocation()
   }
   
   private func stopTracking() {
     switchTrackingButton.setTitle("Start Tracking", for: .normal)
-    locationManager?.stopUpdatingLocation()
+    locationManager.stopUpdatingLocation()
     DispatchQueue.global().async { [weak self] in
       guard let routePath = self?.routePath else { return }
       RouteService.instance.saveRoute(routePath)
@@ -98,19 +100,5 @@ class MapViewController: UIViewController {
     } else {
       loadPreviousRoute()
     }
-  }
-}
-
-extension MapViewController: CLLocationManagerDelegate {
-  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    // Center camera at users position
-    guard let location = locations.last else { return }
-    routePath?.add(location.coordinate)
-    route?.path = routePath
-    setCameraAt(coordinate: location.coordinate)
-  }
-  
-  func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-    debugPrint(error.localizedDescription)
   }
 }

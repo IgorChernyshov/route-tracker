@@ -17,6 +17,7 @@
 		9C302D49215403EE009EA74E /* RoutePolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C302D48215403EE009EA74E /* RoutePolyline.swift */; };
 		9C55AA97215BF349005CE01D /* GetViewControllerStoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55AA96215BF349005CE01D /* GetViewControllerStoryboardID.swift */; };
 		9C55AA9A215BF78C005CE01D /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55AA99215BF78C005CE01D /* BaseRouter.swift */; };
+		9C55AA9E21600ACA005CE01D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55AA9D21600ACA005CE01D /* LocationManager.swift */; };
 		9C6EBAA52152D01300D5BCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA42152D01300D5BCE9 /* AppDelegate.swift */; };
 		9C6EBAA72152D01300D5BCE9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */; };
 		9C6EBAAA2152D01300D5BCE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAA82152D01300D5BCE9 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		9C302D48215403EE009EA74E /* RoutePolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePolyline.swift; sourceTree = "<group>"; };
 		9C55AA96215BF349005CE01D /* GetViewControllerStoryboardID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetViewControllerStoryboardID.swift; sourceTree = "<group>"; };
 		9C55AA99215BF78C005CE01D /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		9C55AA9D21600ACA005CE01D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		9C6EBAA12152D01300D5BCE9 /* route-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "route-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6EBAA42152D01300D5BCE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				9C6EBAA62152D01300D5BCE9 /* MapViewController.swift */,
+				9C55AA9D21600ACA005CE01D /* LocationManager.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -426,11 +429,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-route-tracker/Pods-route-tracker-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -456,6 +463,7 @@
 				9C302D452153A70C009EA74E /* RouteService.swift in Sources */,
 				9C1FBB4F215964ED0069CFBA /* AuthenticationService.swift in Sources */,
 				9C1FBB5321596D9D0069CFBA /* MainMenuViewController.swift in Sources */,
+				9C55AA9E21600ACA005CE01D /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
