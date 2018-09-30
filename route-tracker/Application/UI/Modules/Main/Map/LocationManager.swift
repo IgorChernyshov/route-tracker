@@ -19,7 +19,7 @@ final class LocationManager: NSObject {
     configureLocationManager()
   }
   
-  let locationManager = CLLocationManager()
+  private let locationManager = CLLocationManager()
   
   let location: Variable<CLLocation?> = Variable(nil)
   
