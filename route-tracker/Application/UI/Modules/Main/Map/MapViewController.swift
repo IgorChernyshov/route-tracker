@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import RealmSwift
+import RxSwift
 
 class MapViewController: UIViewController {
   
@@ -18,6 +19,7 @@ class MapViewController: UIViewController {
   private var beginBackgroundTask: UIBackgroundTaskIdentifier?
   
   private let locationManager = LocationManager.instance
+  private let disposeBag = DisposeBag()
   
   private var route: RoutePolyline?
   private var routePath: GMSMutablePath?
@@ -37,6 +39,7 @@ class MapViewController: UIViewController {
       self?.route?.path = self?.routePath
       self?.setCameraAt(coordinate: location.coordinate)
     }
+    .disposed(by: disposeBag)
   }
   
   private func startTracking() {

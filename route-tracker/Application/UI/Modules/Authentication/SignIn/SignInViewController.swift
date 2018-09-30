@@ -17,6 +17,8 @@ class SignInViewController: UIViewController {
   @IBOutlet weak var router: SignInRouter!
   @IBOutlet weak var signInButton: UIButton!
   
+  private let disposeBag = DisposeBag()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setSignInButtonAvailability()
@@ -57,9 +59,8 @@ class SignInViewController: UIViewController {
       .map { login, password in
         return !(login ?? "").isEmpty && (password ?? "").count >= 6
       }
-      .bind { [weak signInButton] inputIsFilled in
-        signInButton?.isEnabled = inputIsFilled
-    }
+      .bind(to: signInButton.rx.isEnabled)
+      .disposed(by: disposeBag)
   }
   
 }
