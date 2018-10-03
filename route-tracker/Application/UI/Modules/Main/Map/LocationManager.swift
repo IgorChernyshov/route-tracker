@@ -21,7 +21,7 @@ final class LocationManager: NSObject {
   
   private let locationManager = CLLocationManager()
   
-  let location: Variable<CLLocation?> = Variable(nil)
+  let location: BehaviorSubject<CLLocation?> = BehaviorSubject(value: nil)
   
   func startUpdatingLocation() {
     locationManager.startUpdatingLocation()
@@ -44,7 +44,7 @@ final class LocationManager: NSObject {
 extension LocationManager: CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     // Center camera at users position
-    self.location.value = locations.last
+    self.location.onNext(locations.last)
   }
   
   func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
