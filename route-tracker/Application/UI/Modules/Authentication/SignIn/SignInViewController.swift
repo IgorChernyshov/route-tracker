@@ -22,6 +22,34 @@ class SignInViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setSignInButtonAvailability()
+    if hasCydiaBundle() || writeOutOfSandbox() {
+      deviceIsJailbrokenAlert()
+      signInButton.isHidden = true
+    }
+  }
+  
+  private func hasCydiaBundle() -> Bool {
+    let filePath = "/Applications/Cydia.app"
+    return FileManager.default.fileExists(atPath: filePath)
+  }
+  
+  private func writeOutOfSandbox() -> Bool {
+    do {
+      let filePath = "/private/test.txt"
+      let fileContents = "test"
+      try fileContents.write(toFile: filePath, atomically: true, encoding: .utf8)
+      try? FileManager.default.removeItem(atPath: filePath)
+      return true
+    } catch {
+      return false
+    }
+  }
+  
+  private func deviceIsJailbrokenAlert() {
+    let alertController = UIAlertController(title: "Jailbreak detected!", message: "The device is jailbroken - You is not allowed to login", preferredStyle: .alert)
+    let closeAction = UIAlertAction(title: "Close", style: .default, handler: nil)
+    alertController.addAction(closeAction)
+    present(alertController, animated: true, completion: nil)
   }
   
   @IBAction func signInButtonWasPressed(_ sender: Any) {
