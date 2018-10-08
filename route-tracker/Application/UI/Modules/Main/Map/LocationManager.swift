@@ -43,7 +43,6 @@ final class LocationManager: NSObject {
 
 extension LocationManager: CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    // Center camera at users position
     self.location.onNext(locations.last)
   }
   
