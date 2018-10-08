@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,10 +32,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     window?.makeKeyAndVisible()
     
+    let center = UNUserNotificationCenter.current()
+    center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+      guard granted else {
+        print("Permission wasn't granted")
+        return
+      }
+    }
+    
     return true
+  }
+  
+  func makeNotificationContent() -> UNNotificationContent {
+    let content = UNMutableNotificationContent()
+    content.title = "Please return to us"
+    content.body = "Lots of cool things happened while you were away"
+    content.badge = 1
+    return content
+  }
+  
+  func makeIntervalNotificationTrigger() -> UNNotificationTrigger {
+    return UNTimeIntervalNotificationTrigger(
+      timeInterval: 10,
+      repeats: false
+    )
+  }
+  
+  func sendNotificationRequest(
+    content: UNNotificationContent,
+    trigger: UNNotificationTrigger) {
+    
+    let request = UNNotificationRequest(
+      identifier: "returnRequest",
+      content: content,
+      trigger: trigger
+    )
+    
+    let center = UNUserNotificationCenter.current()
+    center.add(request) { error in
+      if let error = error {
+        print(error.localizedDescription)
+      }
+    }
   }
 
   func applicationWillResignActive(_ application: UIApplication) {
+    // Create a blurry view for safety
     let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.extraLight)
     let blurredView = UIVisualEffectView(effect: blurEffect)
     blurredView.frame = window!.frame
@@ -44,8 +87,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   func applicationDidEnterBackground(_ application: UIApplication) {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    // Setup a user notification to fire after 10 sec
+    self.sendNotificationRequest(
+      content: self.makeNotificationContent(),
+      trigger: self.makeIntervalNotificationTrigger()
+    )
   }
 
   func applicationWillEnterForeground(_ application: UIApplication) {
@@ -54,6 +100,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func applicationDidBecomeActive(_ application: UIApplication) {
     self.window?.viewWithTag(105)?.removeFromSuperview()
+    application.applicationIconBadgeNumber = 0
   }
 
   func applicationWillTerminate(_ application: UIApplication) {
