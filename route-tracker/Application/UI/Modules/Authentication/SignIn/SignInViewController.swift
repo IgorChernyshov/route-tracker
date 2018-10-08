@@ -16,15 +16,18 @@ class SignInViewController: UIViewController {
   @IBOutlet weak var passwordText: UITextField!
   @IBOutlet weak var router: SignInRouter!
   @IBOutlet weak var signInButton: UIButton!
+  @IBOutlet weak var registerButton: UIButton!
   
   private let disposeBag = DisposeBag()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     setSignInButtonAvailability()
+    // Check if device is jailbroken
     if hasCydiaBundle() || writeOutOfSandbox() {
       deviceIsJailbrokenAlert()
       signInButton.isHidden = true
+      registerButton.isHidden = true
     }
   }
   
@@ -79,6 +82,7 @@ class SignInViewController: UIViewController {
   }
   
   func setSignInButtonAvailability() {
+    // Not DRY. TODO: Rework method to bind to both buttons at once
     Observable
       .combineLatest(
         loginText.rx.text,
@@ -88,6 +92,17 @@ class SignInViewController: UIViewController {
         return !(login ?? "").isEmpty && (password ?? "").count >= 6
       }
       .bind(to: signInButton.rx.isEnabled)
+      .disposed(by: disposeBag)
+
+    Observable
+      .combineLatest(
+        loginText.rx.text,
+        passwordText.rx.text
+      )
+      .map { login, password in
+        return !(login ?? "").isEmpty && (password ?? "").count >= 6
+      }
+      .bind(to: registerButton.rx.isEnabled)
       .disposed(by: disposeBag)
   }
   
