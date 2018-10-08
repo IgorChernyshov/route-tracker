@@ -84,7 +84,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     blurredView.tag = 105
     
     self.window?.addSubview(blurredView)
-    )
   }
 
   func applicationDidEnterBackground(_ application: UIApplication) {
@@ -92,6 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.sendNotificationRequest(
       content: self.makeNotificationContent(),
       trigger: self.makeIntervalNotificationTrigger()
+    )
   }
 
   func applicationWillEnterForeground(_ application: UIApplication) {
