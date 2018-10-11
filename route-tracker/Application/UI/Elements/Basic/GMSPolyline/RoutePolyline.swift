@@ -16,5 +16,4 @@ class RoutePolyline: GMSPolyline {
     self.strokeWidth = 7
     self.strokeColor = #colorLiteral(red: 0, green: 0.5628422499, blue: 0.3188166618, alpha: 1)
   }
-  
 }
