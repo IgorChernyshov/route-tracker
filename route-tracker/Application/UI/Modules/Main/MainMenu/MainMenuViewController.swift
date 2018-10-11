@@ -20,11 +20,11 @@ class MainMenuViewController: UIViewController {
     guard UIImagePickerController.isSourceTypeAvailable(.camera) else { return }
     let imagePickerController = UIImagePickerController()
     imagePickerController.sourceType = .camera
+    imagePickerController.cameraDevice = .front
     imagePickerController.allowsEditing = false
     imagePickerController.delegate = self
     
     present(imagePickerController, animated: true)
-    //router.toSelfie()
   }
   
   @IBAction func logoutButtonWasPressed(_ sender: Any) {
