@@ -20,10 +20,11 @@ class MainMenuViewController: UIViewController {
     guard UIImagePickerController.isSourceTypeAvailable(.camera) else { return }
     let imagePickerController = UIImagePickerController()
     imagePickerController.sourceType = .camera
-    imagePickerController.allowsEditing = true
+    imagePickerController.allowsEditing = false
     imagePickerController.delegate = self
     
-    router.toSelfie()
+    present(imagePickerController, animated: true)
+    //router.toSelfie()
   }
   
   @IBAction func logoutButtonWasPressed(_ sender: Any) {
@@ -40,8 +41,10 @@ extension MainMenuViewController: UINavigationControllerDelegate, UIImagePickerC
   }
   
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-    let image = extractImage(from: info)
-    print(image)
+    let selfie = extractImage(from: info)
+    DispatchQueue.global().async { [weak self] in
+      self?.saveImageToDisk(selfie)
+    }
     
     picker.dismiss(animated: true)
   }
@@ -54,6 +57,17 @@ extension MainMenuViewController: UINavigationControllerDelegate, UIImagePickerC
     } else {
       return nil
     }
+  }
+  
+  private func saveImageToDisk(_ selfie: UIImage?) {
+    guard let strongSelfie = selfie else { return }
+    guard let documentsDirectory = FileManager.default.urls(
+      for: .documentDirectory,
+      in: .userDomainMask
+      ).first else {return}
+    let selfieFilePath = documentsDirectory.appendingPathComponent("selfie.png").path
+    let data = strongSelfie.pngData()
+    FileManager.default.createFile(atPath: selfieFilePath, contents: data, attributes: nil)
   }
 }
 
