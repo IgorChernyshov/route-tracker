@@ -24,6 +24,7 @@
 		9C6EBAAC2152D01400D5BCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAAB2152D01400D5BCE9 /* Assets.xcassets */; };
 		9C6EBAAF2152D01400D5BCE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAAD2152D01400D5BCE9 /* LaunchScreen.storyboard */; };
 		9C9FF5D821594B5000EAA09B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FF5D721594B5000EAA09B /* User.swift */; };
+		9CE7A43C216F59BA00758141 /* SelfieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE7A43B216F59BA00758141 /* SelfieViewController.swift */; };
 		B83A57FE2798C92C0C6FE883 /* Pods_route_tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0201A2193FC349FF8A2F7754 /* Pods_route_tracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		9C6EBAAE2152D01400D5BCE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C6EBAB02152D01400D5BCE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C9FF5D721594B5000EAA09B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9CE7A43B216F59BA00758141 /* SelfieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,8 +297,17 @@
 				9C6EBAA82152D01300D5BCE9 /* Main.storyboard */,
 				9C472821215BC8EB00C75F81 /* MainMenu */,
 				9C472822215BC97F00C75F81 /* Map */,
+				9CE7A43A216F599600758141 /* Selfie */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		9CE7A43A216F599600758141 /* Selfie */ = {
+			isa = PBXGroup;
+			children = (
+				9CE7A43B216F59BA00758141 /* SelfieViewController.swift */,
+			);
+			path = Selfie;
 			sourceTree = "<group>";
 		};
 		FF326E551D15AF0CC9DEAEDF /* Pods */ = {
@@ -453,6 +464,7 @@
 			files = (
 				9C1FBB4D215962FB0069CFBA /* SignInViewController.swift in Sources */,
 				9C6EBAA72152D01300D5BCE9 /* MapViewController.swift in Sources */,
+				9CE7A43C216F59BA00758141 /* SelfieViewController.swift in Sources */,
 				9C302D49215403EE009EA74E /* RoutePolyline.swift in Sources */,
 				9C55AA97215BF349005CE01D /* GetViewControllerStoryboardID.swift in Sources */,
 				9C9FF5D821594B5000EAA09B /* User.swift in Sources */,

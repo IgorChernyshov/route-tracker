@@ -16,6 +16,10 @@ class MainMenuViewController: UIViewController {
     router.toMap()
   }
   
+  @IBAction func takeSelfieButtonWasPressed(_ sender: Any) {
+    router.toSelfie()
+  }
+  
   @IBAction func logoutButtonWasPressed(_ sender: Any) {
     UserDefaults.standard.set(false, forKey: "userIsLoggedIn")
     router.toSignIn()
@@ -29,6 +33,13 @@ final class MainMenuRouter: BaseRouter {
       .instantiateViewController(MapViewController.self)
     
     show(controller)
+  }
+  
+  func toSelfie() {
+    let controller = UIStoryboard(name: "Main", bundle: nil)
+      .instantiateViewController(SelfieViewController.self)
+    
+    present(controller)
   }
   
   func toSignIn() {
