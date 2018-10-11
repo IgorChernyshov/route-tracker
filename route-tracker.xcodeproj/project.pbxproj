@@ -24,6 +24,7 @@
 		9C6EBAAC2152D01400D5BCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAAB2152D01400D5BCE9 /* Assets.xcassets */; };
 		9C6EBAAF2152D01400D5BCE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EBAAD2152D01400D5BCE9 /* LaunchScreen.storyboard */; };
 		9C9FF5D821594B5000EAA09B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FF5D721594B5000EAA09B /* User.swift */; };
+		9CE7A43F216F898E00758141 /* SelfieMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE7A43E216F898E00758141 /* SelfieMarker.swift */; };
 		B83A57FE2798C92C0C6FE883 /* Pods_route_tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0201A2193FC349FF8A2F7754 /* Pods_route_tracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		9C6EBAAE2152D01400D5BCE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C6EBAB02152D01400D5BCE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C9FF5D721594B5000EAA09B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9CE7A43E216F898E00758141 /* SelfieMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieMarker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 		9C47281C215BC78700C75F81 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				9CE7A43D216F897300758141 /* GMSMarker */,
 				9C47281B215BC6BF00C75F81 /* GMSPolyline */,
 			);
 			path = Basic;
@@ -297,6 +300,14 @@
 				9C472822215BC97F00C75F81 /* Map */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		9CE7A43D216F897300758141 /* GMSMarker */ = {
+			isa = PBXGroup;
+			children = (
+				9CE7A43E216F898E00758141 /* SelfieMarker.swift */,
+			);
+			path = GMSMarker;
 			sourceTree = "<group>";
 		};
 		FF326E551D15AF0CC9DEAEDF /* Pods */ = {
@@ -464,6 +475,7 @@
 				9C1FBB4F215964ED0069CFBA /* AuthenticationService.swift in Sources */,
 				9C1FBB5321596D9D0069CFBA /* MainMenuViewController.swift in Sources */,
 				9C55AA9E21600ACA005CE01D /* LocationManager.swift in Sources */,
+				9CE7A43F216F898E00758141 /* SelfieMarker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +623,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73YFFUD89Y;
 				INFOPLIST_FILE = "$(SRCROOT)/route-tracker/Configuration/Release/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -629,6 +642,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73YFFUD89Y;
 				INFOPLIST_FILE = "$(SRCROOT)/route-tracker/Configuration/Release/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -18,18 +18,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F4H-Ch-bL9">
-                                <rect key="frame" x="147" y="297.5" width="81" height="72"/>
+                                <rect key="frame" x="145.5" y="277.5" width="84" height="112"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ild-G5-StZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="81" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="32"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <state key="normal" title="Show Map"/>
                                         <connections>
                                             <action selector="showMapButtonWasPressed:" destination="uOo-Pd-NVf" eventType="touchUpInside" id="gEr-Am-8w4"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HD9-KD-ziu">
+                                        <rect key="frame" x="0.0" y="40" width="84" height="32"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <state key="normal" title="Take Selfie"/>
+                                        <connections>
+                                            <action selector="takeSelfieButtonWasPressed:" destination="uOo-Pd-NVf" eventType="touchUpInside" id="CaX-Qf-tRM"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUA-Ca-f71">
-                                        <rect key="frame" x="0.0" y="40" width="81" height="32"/>
+                                        <rect key="frame" x="0.0" y="80" width="84" height="32"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <state key="normal" title="Logout"/>
                                         <connections>
@@ -69,7 +77,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="124" y="26.53673163418291"/>
+            <point key="canvasLocation" x="82" y="147"/>
         </scene>
         <!--Map-->
         <scene sceneID="tne-QT-ifu">
@@ -136,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992.79999999999995" y="27.436281859070466"/>
+            <point key="canvasLocation" x="1025" y="146"/>
         </scene>
     </scenes>
 </document>

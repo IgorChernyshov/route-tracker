@@ -23,10 +23,24 @@ class MapViewController: UIViewController {
   
   private var route: RoutePolyline?
   private var routePath: GMSMutablePath?
+  private var marker: SelfieMarker?
   
   override func viewDidLoad() {
     super.viewDidLoad()
     configureLocationManager()
+  }
+  
+  private func addNewMarker(coordinate: CLLocationCoordinate2D) {
+    removeOldMarker()
+    
+    let marker = SelfieMarker(position: coordinate)
+    marker.map = mapView
+    self.marker = marker
+  }
+  
+  private func removeOldMarker() {
+    marker?.map = nil
+    marker = nil
   }
   
   private func configureLocationManager() {
@@ -38,6 +52,7 @@ class MapViewController: UIViewController {
       self?.routePath?.add(location.coordinate)
       self?.route?.path = self?.routePath
       self?.setCameraAt(coordinate: location.coordinate)
+      self?.addNewMarker(coordinate: location.coordinate)
     }
     .disposed(by: disposeBag)
   }
