@@ -80,13 +80,6 @@ final class MainMenuRouter: BaseRouter {
     show(controller)
   }
   
-  func toSelfie() {
-    let controller = UIStoryboard(name: "Main", bundle: nil)
-      .instantiateViewController(SelfieViewController.self)
-    
-    present(controller)
-  }
-  
   func toSignIn() {
     let controller = UIStoryboard(name: "Authentication", bundle: nil)
       .instantiateViewController(SignInViewController.self)

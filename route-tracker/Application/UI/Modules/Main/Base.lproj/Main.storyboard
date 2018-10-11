@@ -9,21 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Selfie View Controller-->
-        <scene sceneID="56S-4U-qjD">
-            <objects>
-                <viewController storyboardIdentifier="SelfieViewController" id="7pZ-cg-8FG" customClass="SelfieViewController" customModule="route_tracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hZJ-Kj-UWs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="mbs-OY-N4D"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Mx-HB-ksm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1025" y="500"/>
-        </scene>
         <!--Controller-->
         <scene sceneID="vaN-EE-ItG">
             <objects>
@@ -159,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1025" y="-225"/>
+            <point key="canvasLocation" x="1025" y="146"/>
         </scene>
     </scenes>
 </document>
